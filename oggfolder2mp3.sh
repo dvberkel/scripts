@@ -2,7 +2,7 @@
 #
 #  oggfolder2mp3.sh - Script to convert Ogg folders to Mp3
 #
-#   Requires: ffmpeg, id3lib
+#   Requires: avconv, id3lib
 #
 #   Sumit Khanna - http://penguindreams.org
 #
@@ -11,10 +11,10 @@
 #
 
 usage() {
-  echo -e "\nmp3folder2ogg.sh - recursively converts a folder of oggs to mp3s\n"
-  echo -e "\tmp3folder2ogg.sh <ogg folder to convert> <destination> [<mp3 bitrate in kbps>]\n"
-  echo -e "\t\tThe name of the source folder and its directory structure"
-  echo -e "\t\tare recreated in the destination\n"
+  echo -e "\n mp3folder2ogg.sh - recursively converts a folder of oggs to mp3s"
+  echo -e "\n\t mp3folder2ogg.sh <ogg folder to convert> <destination> [<mp3 bitrate in kbps>]"
+  echo -e "\n\t The name of the source folder and its directory structure"
+  echo -e "\n\t are recreated in the destination"
   echo -e "\n sudo apt-get install vorbis-tools easytag libid3-tools libavcodec-extra-53"
   exit 1
 }

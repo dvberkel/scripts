@@ -42,9 +42,9 @@ copyTags() {
 #  $3 - bitrate in k/bps (e.g. 128, 256, etc)
 convert() {
   #convert k/bps to bps for avconf
-  bitrate=$(($3 * 1000));
-  if ["$3" -gt 0] 
+  if [ "$3" -gt 0 2> /dev/null ]
     then
+      bitrate=$(($3 * 1000));
       avconv -y -i "$1" -c:a libmp3lame -b:a "$bitrate" "$2"
     else
       avconv -y -i "$1" -c:a libmp3lame "$2"
